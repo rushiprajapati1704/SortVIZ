@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Viz-Merge Sort</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../mainstyle.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="../bubble/index.html"><button>Bubble</button></a>
+        <a href="../selection/index.html"><button>Selection</button></a>
+        <a href="../insertion/index.htm"><button>Insertion</button></a>
+        <a href="../quick/index.html"><button>Quick</button></a>
+        <a href="./index.html"><button>Merge</button></a>
+    </div>
+    <div class="mainbar">
+        <h1 style="color: rgb(255, 1, 90);">SORTING VISUALIZER -- MERGE SORT</h1>
+        <div class="sp">
+        <label style="font-size: 20px; color: rgb(255, 1, 90);">Speed : </label>
+        <input type="range" id="speed" min="100" max="500" step="10" value="300"/>
+        </div>
+    </div >
+
+    <div class="input">
+        <div>
+        <label>Enter Size Of Array : </label>
+        <input type="number" id="n" value="20">
+        </div>
+        <button onclick="init()">Get</button>
+    </div>
+    <div style="display:flex;justify-content: space-between;width:80%; color: rgb(255, 1, 90); font-size: 20px;">
+        <h3>Comparision : <span id="compar">0</span></h3>
+        <h3>Swap : <span id="swaping">0</span></h3>
+    </div>
+    <div id="container"></div>
+        <div>
+            <button onclick="play()">SORT</button>
+            <button onclick="window.location.reload(true)">Clear</button>
+        </div>
+    <script src="script.js"></script>
+
+    <div class="detail">
+        <h2 style="text-align: center;">Merge Sort</h2>
+        <div class="subs">
+            <div class="one">
+                <ul>
+                    <li>Merge Sort is a Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves. The merge() function is used for merging two halves. The merge(arr, l, m, r) is a key process that assumes that arr[l..m] and arr[m+1..r] are sorted and merges the two sorted sub-arrays into one. Merge Sort is useful for sorting linked lists in O(nLogn) time.</li>
+                </ul>
+                </div>
+            <div>
+                <ul>
+                    <li>Best Case Complexity: O(n*Log(n))</li>
+                    <li>Average Case Complexity: O(n*Log(n))</li>
+                    <li>Worst Case Complexity: O(n*Log(n))</li>
+                    <li>Space Complexity: O(n)</li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin: 10px;">
+        <button><a href="https://en.wikipedia.org/wiki/Merge_sort" target="_blank">Learn More</a></button>
+        </div>
+    </div>
+
+    <details>
+        <summary>What Indicates Colors ?</summary>
+        <p class="pink">Compare The Element</p> 
+        <p class="red">Swap The Element</p>
+    </details>
+    <div style="display: flex;">
+        <button onclick="check()">GitHub</button>
+        <p id="valdate" style="padding-left: 20px; padding-top: 20px;"></p>
+        </div>
+</body>
+</html>
