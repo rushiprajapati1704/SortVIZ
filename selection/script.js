@@ -3,6 +3,9 @@ function init(){
     var n=20;
      n = document.getElementById('n').value;
     var width = window.innerWidth;
+    if(width<=800 && n>37){
+        alert("Array Size 37 < "+n);
+    }
     if(n>60){
         alert("Array Size is 60 < "+n);
         return;
