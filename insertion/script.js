@@ -6,6 +6,7 @@ function init(){
     if(width<=800 && n>37){
         alert("Array Size 37 < "+n);
     }
+    
     if(n>60){
         alert("Array Size is 60 < "+n);
         return;
